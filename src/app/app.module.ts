@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { BookshelfComponent } from './bookshelf/bookshelf.component';
+import { BookshelfService } from "./shared/bookshelf.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { BookshelfComponent } from './bookshelf/bookshelf.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [BookshelfService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
