@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { BookshelfComponent } from './bookshelf/bookshelf.component';
 import { BookshelfService } from "./shared/bookshelf.service";
+import { BookComponent } from './book/book.component';
+import { routing } from './app.routing';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCQybCZoCID_mOJ1LMC-GSAPmVjP4dpnMo",
@@ -21,12 +23,14 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HeaderComponent,
-    BookshelfComponent
+    BookshelfComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [BookshelfService],
