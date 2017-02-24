@@ -10,7 +10,7 @@ import {BookshelfService} from "../shared/bookshelf.service";
 })
 export class BookshelfComponent implements OnInit {
 
-  books: Book[];
+  books;
 
   constructor(private bookshelfService: BookshelfService) { }
 
@@ -19,7 +19,7 @@ export class BookshelfComponent implements OnInit {
   }
 
   loadBooks() {
-    this.bookshelfService.getBooks().subscribe((data: Book[]) => this.books = data);
+    this.books = this.bookshelfService.getBooks();
   }
 
 }
