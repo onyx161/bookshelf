@@ -1,4 +1,5 @@
-import {Chapter} from "./chapter";
+import { Chapter } from './chapter';
+
 export class Book {
   constructor(
     public title: string,

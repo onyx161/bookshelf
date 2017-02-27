@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Book} from "../shared/book";
-import {BookshelfService} from "../shared/bookshelf.service";
+import { BookshelfService } from './../shared/bookshelf.service';
 
 @Component({
   selector: 'bs-bookshelf',
