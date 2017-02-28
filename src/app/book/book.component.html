@@ -1,3 +1,10 @@
-<p>
-  book works!
-</p>
+<a class="button back" [routerLink]="['/books']">Back</a>
+
+<div class="book-detail">
+  <img src="{{(book | async)?.cover}}" />
+  <h3 class="title">{{(book | async)?.title}}</h3>
+  <p class="author">{{(book | async)?.author}}</p>
+  <p class="description">{{(book | async)?.description}}</p>
+
+  <a class="button" routerLink="/books/{{bookId}}/chapters/0">Read</a>
+</div>

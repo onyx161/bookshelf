@@ -15,4 +15,8 @@ export class BookshelfService {
     return this.af.database.list('/books');
   }
 
+  getBook(bookId: string) {
+    return this.af.database.object('books/' + bookId);
+  }
+
 }
